@@ -4,10 +4,6 @@ let pen = true
 let apple = false
 let orange = true
 
-if (key && documents && pen && (apple || orange)) {
-    shouldGoToWork = true
-} else {
-    shouldGoToWork = false
-}
+shouldGoToWork = key && documents && pen && (apple || orange);
 
 console.log(shouldGoToWork)
