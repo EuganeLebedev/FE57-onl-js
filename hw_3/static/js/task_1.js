@@ -1,11 +1,11 @@
-let my_variable1 = 'true'
-let my_variable2 =  false
-let my_variable3 =  17
-let my_variable4 =  undefined
-let my_variable5 =  null
+let myVariable1 = 'true'
+let myVariable2 =  false
+let myVariable3 =  17
+let myVariable4 =  undefined
+let myVariable5 =  null
 
-console.log(`Variable: my_variable1 have type: ${typeof my_variable1}`)
-console.log(`Variable: my_variable2 have type: ${typeof my_variable2}`)
-console.log(`Variable: my_variable3 have type: ${typeof my_variable3}`)
-console.log(`Variable: my_variable4 have type: ${typeof my_variable4}`)
-console.log(`Variable: my_variable5 have type: ${typeof my_variable5}`)
+console.log(`Variable: myVariable1 have type: ${typeof myVariable1}`)
+console.log(`Variable: myVariable2 have type: ${typeof myVariable2}`)
+console.log(`Variable: myVariable3 have type: ${typeof myVariable3}`)
+console.log(`Variable: myVariable4 have type: ${typeof myVariable4}`)
+console.log(`Variable: myVariable5 have type: ${typeof myVariable5}`)
