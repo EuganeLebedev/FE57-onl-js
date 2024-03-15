@@ -10,10 +10,10 @@
     <div class="container">
         <div class="tasks">
             <div class="tasks__wrapper">
-                <form action="" class="tasks__new-form">
-                    <button type="submit" class="btn tasks__delete-all">Delete All</button>
-                    <input type="text" class="tasks__new_text" placeholder="Enter todo ...">
-                    <button type="submit" class="btn taksks__add-new">Add</button>
+                <form action="" id="newTaskForm" class="tasks__new-form">
+                    <button type="button" id="btnDelete" class="btn tasks__delete-all">Delete All</button>
+                    <input type="text" id="newTaskContent" name="newTaskData" class="tasks__new_text" placeholder="Enter todo ...">
+                    <button type="submit" id="btnAdd" class="btn taksks__add-new">Add</button>
                 </form>
                 <ul class="tasks__items" id="root">
 

@@ -68,6 +68,14 @@
             border: none;
             align-items:end;
         }
+
+        &.done {
+            background-color: #939393;
+
+            p.tasks__item-text {
+                text-decoration: line-through;
+            }
+        }
     }
 
     &__item-text {
