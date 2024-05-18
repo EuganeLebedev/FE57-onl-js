@@ -1,0 +1,40 @@
+button.primary {
+    background-color: blue;
+    color: #ffffff;
+    padding: 10px 30px;
+    border: 1px solid black;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+button.primary:hover {
+    background-color: cornflowerblue;
+}
+
+button.secondary {
+    background-color: gray;
+    color: black;
+    padding: 10px 30px;
+    border: 1px solid black;
+    width: 200px;
+    margin-bottom: 10px
+
+}
+
+button.secondary:hover {
+    background-color: lightslategray;
+}
+
+button.secondary2 {
+    background-color: gray;
+    color: tomato;
+    padding: 10px 30px;
+    border: 1px solid black;
+    width: 200px;
+    margin-bottom: 10px
+
+}
+
+button.secondary2:hover {
+    background-color: lightslategray;
+}

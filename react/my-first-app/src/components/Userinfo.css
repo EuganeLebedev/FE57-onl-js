@@ -1,0 +1,27 @@
+.UserInfo {
+    background-color: blue;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+
+
+
+}
+
+.UserInfo span {
+    color: white;
+    text-align: center;
+    justify-content: center;
+    /*padding: 0 15px;*/
+
+}
+
+.Initials {
+    color: white;
+    background-color: #61dafb;
+    padding: 3px 10px;
+}
