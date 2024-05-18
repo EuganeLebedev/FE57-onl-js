@@ -129,7 +129,7 @@ const filterByTitle = (films: TFilm[], title: string) => films.filter(film => fi
 
 const filterByTitleOrPlot = (films: TFilm[], searchTerm: string) => films.filter(film => film.title.toLowerCase().includes(searchTerm.toLowerCase()) || film.plot.toLowerCase().includes(searchTerm.toLowerCase()));
 
-const filterFilmsByParam = (films: TFilm[], key: string, value: string | number) => films.filter(film => film[key] === value);
+const filterFilmsByParam = (films: TFilm[], key: string, value: string | number) => films.filter(film => film[key as keyof TFilm] === value);
 
 const filteredByYear = filterByYear(films, 2011);
 const filteredByTitle = filterByTitle(films, 'Black Widow');
