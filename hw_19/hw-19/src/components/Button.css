@@ -1,0 +1,58 @@
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: blue;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-right: 15px;
+    display: flex;
+}
+
+.btn::before {
+    content: "";
+    border-bottom: 3px solid #fff;
+    width: 60%;
+    transition: all .3s linear;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.btn::after {
+    content: "";
+    border-bottom: 3px solid #fff;
+    width: 60%;
+    transition: all .3s linear;
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+}
+
+.btn-item {
+    border-bottom: 3px solid #fff;
+    width: 60%;
+    transition: all .3s linear;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+}
+
+.btn-active .btn-item {
+    opacity: 0;
+}
+
+.btn-active:after {
+    transform: rotate(-45deg)translate(10px, -10px);
+}
+
+.btn-active:before {
+    transform: rotate(45deg)translate(12px, 14px);
+}
