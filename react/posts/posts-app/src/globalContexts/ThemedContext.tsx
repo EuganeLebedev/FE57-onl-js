@@ -6,8 +6,11 @@ type ThemeContextType = {
     setTheme: (newTheme: ThemeEnum) => void,
 }
 
+const defaultStorageTheme = localStorage.getItem("prefTheme")
+let defaultTheme = defaultStorageTheme == "dark" ? ThemeEnum.dark : ThemeEnum.light
+
 const ThemedContext = createContext<ThemeContextType>({
-    theme: ThemeEnum.light,
+    theme: defaultTheme,
     setTheme: () => {}
 })
 

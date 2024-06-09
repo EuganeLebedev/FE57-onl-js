@@ -1,6 +1,6 @@
 
-import { useState } from 'react';
-const useQueryExtended = (queryFunction) => {
+import {SetStateAction, useState} from 'react';
+const useQueryExtended = (queryFunction: () => SetStateAction<any>) => {
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 

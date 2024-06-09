@@ -1,17 +1,20 @@
-import {PostTypesEnum} from "../../../utils/globalTypes.ts";
-
+import "./styles.ts"
+import {PostLink} from "./styles.ts";
 
 interface Props {
-    postSize: PostTypesEnum,
     title: string,
     postID: number,
+    isDark: boolean,
+    isLarge?: boolean
 }
 
 export const Title = (props: Props) => {
 
-    const { postSize, title, postID } = props
+    const { title, postID, isDark, isLarge } = props
     return (
-        <a href={`post/${postID}`}><h2 className={postSize ===PostTypesEnum.small? 'text-sm': postSize ===PostTypesEnum.middle? 'text-md': 'text-lg'}> { title }</h2></a>
+        <PostLink href={`post/${postID}`} isDark={isDark}>
+            {isLarge ? <h2>{title}</h2> : <h4>{title}</h4>}
+        </PostLink>
     );
 }
 

@@ -20,11 +20,9 @@ const Button = (props:ButtonProps) => {
 
     // const match = useMatch(link || '')
 
-
     const {theme}= useContext(ThemedContext)
 
     const handleClick = () => {
-        console.log('privet from' , title)
         onClick()
     }
         // const renderLabel = () => {
@@ -35,9 +33,9 @@ const Button = (props:ButtonProps) => {
         // if (match) return  {backgroundColor: '#ff0'}
         if (customStyle) return customStyle
         if (theme === ThemeEnum.dark) {
-            return {backgroundColor: 'black', color: 'white'}
+            return {backgroundColor: '#213547', color: 'white'}
         }
-        return {backgroundColor: 'white', color: 'black'}
+        return {backgroundColor: 'white', color: '#213547'}
     }
 
 

@@ -8,7 +8,9 @@ import RouterComponent from "./router/RouterComponent.tsx";
 import {useState} from "react";
 
 function App() {
-    const [theme, setTheme] = useState<ThemeEnum>(ThemeEnum.light);
+    const defaultStorageTheme = localStorage.getItem("prefTheme")
+    let defaultTheme = defaultStorageTheme == "dark" ? ThemeEnum.dark : ThemeEnum.light
+    const [theme, setTheme] = useState<ThemeEnum>(defaultTheme);
 
   return (
     <>

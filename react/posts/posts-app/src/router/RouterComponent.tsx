@@ -30,6 +30,7 @@ const RouterComponent = () => {
             <Route path={'post/:postID'} Component={PostPage}/>
             <Route path={''} Component={() => <Navigate to={'/posts'}/>}/>
             <Route path='*' Component={NotFound404}/>
+            <Route path={'login'} Component={() => <Navigate to={'/posts'}/>}/>
         </Routes>
     </BrowserRouter>
 }

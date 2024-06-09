@@ -1,5 +1,3 @@
-import Date from "../components/Post/Date/Date.tsx";
-
 export const enum ThemeEnum {
     light ='light',
     dark = 'dark'
@@ -11,23 +9,74 @@ export const enum PostTypesEnum {
     large = "large"
 }
 
+export type GeoType = {
+    lat: string,
+    lng: string,
+}
+
+export type AddressType = {
+    street: string,
+    suite: string,
+    city: string,
+    zipcode: string,
+    geo: GeoType,
+}
+
+export type LoginType = {
+    uuid: string,
+    username: string,
+    password: string,
+    md5: string,
+    sha1: string,
+    registered: string,
+}
+
+export type CompanyType = {
+    name: string,
+    catchPhrase: string,
+    bs: string,
+}
+
 export type UserType = {
     id: number,
-    name: string,
-    username:string,
+    firstname: string,
+    lastname:string,
+    email:string,
+    birthDate:string,
+    login:LoginType,
+    address:AddressType,
+    phone:string,
+    website:string,
+    company:CompanyType,
 }
 
 export type PostType = {
-    userId: number,
     id: number,
-    title: string,
-    body:string,
+    slug: string,
+    url: string,
+    title:string,
+    content:string,
+    image:string,
+    thumbnail:string,
+    status:string,
+    category:string,
+    publishedAt:string,
+    updatedAt:string,
+    userId:string,
 }
 
 export type PostWithUserType = {
-    userId: UserType,
     id: number,
-    title: string,
-    body:string,
-    date: typeof Date,
+    slug: string,
+    url: string,
+    title:string,
+    content:string,
+    image:string,
+    thumbnail:string,
+    status:string,
+    category:string,
+    publishedAt:string,
+    updatedAt:string,
+    userId:string,
+    user: UserType | undefined,
 }
