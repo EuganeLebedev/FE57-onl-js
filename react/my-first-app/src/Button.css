@@ -2,7 +2,7 @@ button.primary {
     background-color: blue;
     color: #ffffff;
     padding: 10px 30px;
-    border: 1px solid black;
+    border: 1px solid #213547;
     width: 200px;
     margin-bottom: 10px;
 }
@@ -13,9 +13,9 @@ button.primary:hover {
 
 button.secondary {
     background-color: gray;
-    color: black;
+    color: #213547;
     padding: 10px 30px;
-    border: 1px solid black;
+    border: 1px solid #213547;
     width: 200px;
     margin-bottom: 10px
 
@@ -29,7 +29,7 @@ button.secondary2 {
     background-color: gray;
     color: tomato;
     padding: 10px 30px;
-    border: 1px solid black;
+    border: 1px solid #213547;
     width: 200px;
     margin-bottom: 10px
 
