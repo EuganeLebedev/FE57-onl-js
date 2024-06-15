@@ -7,6 +7,7 @@ import {PostThumbnail, PostWrapperL, PostWrapperM, PostWrapperS} from "./styles.
 import {SwitchContent} from "../../utils/SwitchContent.tsx";
 import {useContext} from "react";
 import ThemedContext from "../../globalContexts/ThemedContext.tsx";
+import Thumbnail from "./Poster/Thumbnail.tsx";
 
 
 interface Props {
@@ -39,9 +40,7 @@ export const PostSmall = (props: PostProps) => {
                 <PostDate date={post.publishedAt}/>
                 <Title title={post.title} postID={post.id} isDark={theme == ThemeEnum.dark}/>
             </div>
-            <div>
-                <PostThumbnail src={post.thumbnail} loading={"lazy"} isSmall/>
-            </div>
+            <Thumbnail post={post} isSmall/>
         </PostWrapperS>
     )
 }
@@ -51,9 +50,7 @@ export const PostMiddle = (props: PostProps) => {
     const { post} = props
     return (
         <PostWrapperM isDark={theme == ThemeEnum.dark}>
-            <div>
-                <PostThumbnail src={post.thumbnail} loading={"lazy"}/>
-            </div>
+            <Thumbnail post={post}/>
             <div>
                 <PostDate date={post.publishedAt}/>
                 <Title title={post.title} postID={post.id} isDark={theme == ThemeEnum.dark}/>
@@ -72,9 +69,7 @@ export const PostLarge = (props: PostProps) => {
                 <Title title={post.title} postID={post.id} isDark={ theme == ThemeEnum.dark} isLarge/>
                 <Content content={post.content}/>
             </div>
-            <div>
-                <PostThumbnail src={post.thumbnail} loading={"lazy"}/>
-            </div>
+            <Thumbnail post={post}/>
 
         </PostWrapperL>
     )

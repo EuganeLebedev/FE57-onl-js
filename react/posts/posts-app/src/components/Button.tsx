@@ -3,6 +3,7 @@ import ThemedContext from "../globalContexts/ThemedContext.tsx";
 import {ThemeEnum} from "../utils/globalTypes.ts";
 // import {useMatch} from "react-router-dom";
 import Typo from "../components/Typo.tsx"
+import {ButtonHeader} from "./styles.ts";
 
 
 export interface ButtonProps {
@@ -42,7 +43,7 @@ const Button = (props:ButtonProps) => {
     return <div>
         {showLabel && <Typo value={title} customStyle={customStyle}/> }
         {/*{renderLabel()}*/}
-    <input className="button" onClick={handleClick} style={getNewThemeStyle()} type="button" value={title}/></div>
+    <ButtonHeader className="button" onClick={handleClick} style={getNewThemeStyle()} type="button" value={title}/></div>
 }
 
 

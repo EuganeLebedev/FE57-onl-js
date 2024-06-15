@@ -3,14 +3,15 @@ import { useState} from "react";
 import { Post } from "../components/Post/Post.tsx"
 import {PostTypesEnum, PostWithUserType} from "../utils/globalTypes.ts";
 import {getPosts, getUsers, attachUsersToPost} from "./services.tsx";
-// import useQueryExtended from "../hooks/useQueryExtended";
 import {useDidUpdate} from "../hooks/useDidUpdate.tsx";
+import {PostImageModal} from "./PostImageModal.tsx";
+import {useSelector} from "react-redux";
 
 export const Posts = () => {
 
     const [posts, setPosts] = useState<PostWithUserType[]>([]);
     // const {data:dataUsers , getData:fetchUsers, isLoading:isLoadingUsers, }  = useQueryExtended(getUsers)
-
+    const {selectedPost} = useSelector(state => state.postImageReducer)
     useDidUpdate(() => {
         const getData = async  () => {
             const postsData = await getPosts()
@@ -24,9 +25,8 @@ export const Posts = () => {
     let mainPost =  posts.slice(0, 1)
     let pagePosts =  posts.slice(1, 10)
     let additionalPosts =  posts.slice(11)
-
     return (
-        <PostsContainer>
+        <PostsContainer isFixed={selectedPost}>
             <PagePostsWrapper>
                 <MainPosts>
                     {mainPost.map((el) => {
@@ -44,6 +44,7 @@ export const Posts = () => {
                     return <Post postSize={PostTypesEnum.small} post={el}/>
                 })}
             </PostsHistory>
+            <PostImageModal/>
         </PostsContainer>
     );
 }

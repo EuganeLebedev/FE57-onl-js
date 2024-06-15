@@ -10,7 +10,7 @@ export const PostThumbnail = styled.img<{isSmall?: boolean}>`
 export const PostWrapperL = styled.div<{isDark: boolean}>`
     color: ${p => (p.isDark ? "white" : "#213547")};
     padding: 15px;
-    //max-width: 800px;
+    //max-width: 750px;
     display: flex;
 `;
 

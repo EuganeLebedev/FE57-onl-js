@@ -65,18 +65,18 @@ export type PostType = {
     userId:string,
 }
 
-export type PostWithUserType = {
-    id: number,
-    slug: string,
-    url: string,
-    title:string,
-    content:string,
-    image:string,
-    thumbnail:string,
-    status:string,
-    category:string,
-    publishedAt:string,
-    updatedAt:string,
-    userId:string,
+export interface PostWithUserType extends PostType {
+    // id: number,
+    // slug: string,
+    // url: string,
+    // title:string,
+    // content:string,
+    // image:string,
+    // thumbnail:string,
+    // status:string,
+    // category:string,
+    // publishedAt:string,
+    // updatedAt:string,
+    // userId:string,
     user: UserType | undefined,
 }

@@ -1,11 +1,10 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.scss'
 import ThemedContext from "./globalContexts/ThemedContext.tsx";
 import {ThemeEnum} from "./utils/globalTypes.ts";
 import RouterComponent from "./router/RouterComponent.tsx";
 import {useState} from "react";
+import {Provider} from "react-redux";
+import {store} from "./redux/store.ts";
 
 function App() {
     const defaultStorageTheme = localStorage.getItem("prefTheme")
@@ -14,9 +13,11 @@ function App() {
 
   return (
     <>
-        <ThemedContext.Provider value={{theme, setTheme}}>
-            <RouterComponent/>
-        </ThemedContext.Provider>
+        <Provider store={store}>
+            <ThemedContext.Provider value={{theme, setTheme}}>
+                <RouterComponent/>
+            </ThemedContext.Provider>
+        </Provider>
     </>
   )
 }
