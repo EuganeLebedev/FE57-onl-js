@@ -4,6 +4,16 @@ export const PostThumbnail = styled.img<{isSmall?: boolean}>`
     ${p => (p.isSmall && 
                     "max-width: 100px;"
     )};
+    width: 100%;
+    object-fit: contain;
+    
+`;
+
+export const PostThumbnailWrapper = styled.div<{isSmall?: boolean}>`
+    ${p => (p.isSmall &&
+    "max-width: 100px;"
+)};
+    width: "100%";
     
 `;
 

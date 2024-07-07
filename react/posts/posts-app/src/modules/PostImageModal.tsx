@@ -22,7 +22,7 @@ export const PostImageModal = () => {
     return (
         <PostPopupContainer onClick={handleClosePopup}>
             <PostPopupWrapper isDark={theme == ThemeEnum.dark}>
-                <PostThumbnail src={selectedPost.thumbnail} loading={"lazy"}/>
+                <PostThumbnail src={selectedPost.image} loading={"lazy"}/>
             </PostPopupWrapper>
         </PostPopupContainer>
     )

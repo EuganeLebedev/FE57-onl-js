@@ -52,17 +52,13 @@ export type UserType = {
 
 export type PostType = {
     id: number,
-    slug: string,
-    url: string,
-    title:string,
-    content:string,
     image:string,
-    thumbnail:string,
-    status:string,
-    category:string,
-    publishedAt:string,
-    updatedAt:string,
-    userId:string,
+    text:string,
+    date:string,
+    lesson_num:number,
+    title:string,
+    description:string,
+    author:string,
 }
 
 export interface PostWithUserType extends PostType {

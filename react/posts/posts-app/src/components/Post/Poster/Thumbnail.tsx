@@ -1,10 +1,10 @@
-import {PostThumbnail} from "../styles.ts";
+import {PostThumbnail, PostThumbnailWrapper} from "../styles.ts";
 import {useDispatch} from "react-redux";
 import {setSelectedPost} from "../../../redux/reducers/postImageReducer.tsx";
-import {PostWithUserType} from "../../../utils/globalTypes.ts";
+import {PostType, PostWithUserType} from "../../../utils/globalTypes.ts";
 
 interface Props {
-    post: PostWithUserType,
+    post: PostType,
     isSmall?: boolean,
 }
 
@@ -18,9 +18,9 @@ export const Thumbnail = (props: Props) => {
     }
 
     return (
-        <div onClick={handleClickThumbnail}>
-            <PostThumbnail src={post.thumbnail} isSmall={isSmall} loading={"lazy"}/>
-        </div>
+        <PostThumbnailWrapper onClick={handleClickThumbnail}>
+            <PostThumbnail src={post.image} isSmall={isSmall} loading={"lazy"}/>
+        </PostThumbnailWrapper>
     );
 }
 

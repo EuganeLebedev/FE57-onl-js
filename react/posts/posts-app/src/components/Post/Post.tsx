@@ -2,8 +2,8 @@ import "./Post.scss"
 import { PostDate } from "./Date/Date.tsx"
 import { Title } from "./Title/Title.tsx"
 import { Content } from "./Content/Content.tsx"
-import {PostTypesEnum, PostWithUserType, ThemeEnum} from "../../utils/globalTypes.ts";
-import {PostThumbnail, PostWrapperL, PostWrapperM, PostWrapperS} from "./styles.ts";
+import {PostType, PostTypesEnum, PostWithUserType, ThemeEnum} from "../../utils/globalTypes.ts";
+import {PostWrapperL, PostWrapperM, PostWrapperS} from "./styles.ts";
 import {SwitchContent} from "../../utils/SwitchContent.tsx";
 import {useContext} from "react";
 import ThemedContext from "../../globalContexts/ThemedContext.tsx";
@@ -12,11 +12,11 @@ import Thumbnail from "./Poster/Thumbnail.tsx";
 
 interface Props {
     postSize: PostTypesEnum,
-    post: PostWithUserType,
+    post: PostType,
 }
 
 interface PostProps {
-    post: PostWithUserType,
+    post: PostType,
 }
 
 
@@ -37,7 +37,7 @@ export const PostSmall = (props: PostProps) => {
     return (
         <PostWrapperS isDark={theme == ThemeEnum.dark}>
             <div>
-                <PostDate date={post.publishedAt}/>
+                <PostDate date={post.date}/>
                 <Title title={post.title} postID={post.id} isDark={theme == ThemeEnum.dark}/>
             </div>
             <Thumbnail post={post} isSmall/>
@@ -52,7 +52,7 @@ export const PostMiddle = (props: PostProps) => {
         <PostWrapperM isDark={theme == ThemeEnum.dark}>
             <Thumbnail post={post}/>
             <div>
-                <PostDate date={post.publishedAt}/>
+                <PostDate date={post.date}/>
                 <Title title={post.title} postID={post.id} isDark={theme == ThemeEnum.dark}/>
             </div>
         </PostWrapperM>
@@ -65,9 +65,9 @@ export const PostLarge = (props: PostProps) => {
     return (
         <PostWrapperL isDark={ theme == ThemeEnum.dark}>
             <div>
-                <PostDate date={post.publishedAt}/>
+                <PostDate date={post.date}/>
                 <Title title={post.title} postID={post.id} isDark={ theme == ThemeEnum.dark} isLarge/>
-                <Content content={post.content}/>
+                <Content content={post.description}/>
             </div>
             <Thumbnail post={post}/>
 

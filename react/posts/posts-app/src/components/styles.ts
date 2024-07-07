@@ -8,6 +8,6 @@ export const HeaderWrapper = styled.div<{isDark: boolean}>`
     background-color: ${p => (p.isDark ? "#282c34" : "#646cff")};
 `;
 
-export const ButtonHeader = styled.input<{isDark: boolean}>`
+export const ButtonHeader = styled.input<{isDark?: boolean}>`
     
 `;

@@ -69,3 +69,12 @@ export const PostPopupWrapper = styled.div<{isDark: boolean}>`
         height: 100%;
     }
 `;
+
+export const SignInContainer = styled.div`   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+`;

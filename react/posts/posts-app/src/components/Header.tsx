@@ -21,6 +21,8 @@ const Header = () => {
         localStorage.setItem("prefTheme", newTheme)
     }
 
+    const handleOPenLogin = () => navigation('/sign-in')
+
     const handleOpenHome = () => navigation('/')
     const handleOpenCatalog = () => navigation('/posts')
 
@@ -33,6 +35,7 @@ const Header = () => {
         <Button title="Home page" link={'/'} onClick={handleOpenHome}/>
         <Button title="Posts" link={'/posts'} onClick={handleOpenCatalog}/>
         <Button title="Switch theme" onClick={handleSwitchTheme}/>
+        <Button title="Login" onClick={handleOPenLogin}/>
     </HeaderWrapper>
 }
 
