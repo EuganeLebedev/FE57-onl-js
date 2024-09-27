@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px; 
+}
+
+.tasks {
+
+    padding: 0 15px; 
+    
+    &__wrapper{
+        margin: 0 auto;
+        background-color: #d5d5d5;
+        border-radius: 20px;
+        border: 2px solid #000000;
+        padding: 25px;
+    }
+
+    &__new-form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    &__new_text {
+        border-radius: 5px;
+        border: 2px solid #000000;
+        width: 100%;
+        padding: 15px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__items {
+        list-style-type: none;
+    }
+
+    &__item {
+        margin: 10px 0;;
+    }
+
+    &__item-form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        border: 2px solid #000000;
+        padding: 15px;
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            border: none;
+            align-items:end;
+        }
+    }
+
+    &__item-text {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    &__item-done {
+        background-color: #6ce4cf;
+    }
+
+    &__item-text {
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 15px;
+    }
+}
+
+.btn {
+    background-color: #6ce4cf;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    max-width: 250px;
+    min-width: 105px;
+    padding: 20px;
+}
+
+.btn-task {
+    width: 25px;
+    height: 25px; 
+    padding: 3px;
+    min-width: initial;
+}
